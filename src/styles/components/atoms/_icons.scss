@@ -1,0 +1,70 @@
+[class^='icon-'],
+[class*=' icon-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+	content: '\e902';
+}
+.icon-cinema:before {
+	content: '\e903';
+}
+.icon-dowload:before {
+	content: '\e904';
+}
+.icon-download:before {
+	content: '\e905';
+}
+.icon-email:before {
+	content: '\e906';
+}
+.icon-home:before {
+	content: '\e907';
+}
+.icon-info:before {
+	content: '\e909';
+}
+.icon-like:before {
+	content: '\e90a';
+}
+.icon-play:before {
+	content: '\e90b';
+}
+.icon-plus:before {
+	content: '\e90c';
+}
+.icon-search:before {
+	content: '\e90d';
+}
+.icon-github:before {
+	content: '\e901';
+}
+.icon-gmail:before {
+	content: '\e90e';
+}
+.icon-twitter:before {
+	content: '\e908';
+}
+.icon-volume:before {
+	content: '\ea27';
+}
+
+.is-muted .icon-volume:before {
+	content: '\ea2a';
+}
+
+.is-added .icon-plus::before {
+	content: '\e900';
+	font-size: 1rem;
+}

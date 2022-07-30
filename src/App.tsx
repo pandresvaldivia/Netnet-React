@@ -1,9 +1,7 @@
-import Main from './components/main';
+import Catalog from './common/components/organims/Catalog';
 
 const App = () => {
-	const path = import.meta.env.VITE_BASE_URL;
-
-	return <Main url={path} />;
+	return <Catalog />;
 };
 
 export default App;

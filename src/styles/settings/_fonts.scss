@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Avenir Next';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../../../public/fonts/AvenirNext-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Avenir Next';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../../../public/fonts/AvenirNext-Bold.otf');
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../../../fonts/icomoon.eot?k6miww');
+	src: url('../../../fonts/icomoon.eot?k6miww#iefix')
+			format('embedded-opentype'),
+		url('../../../fonts/icomoon.ttf?k6miww') format('truetype'),
+		url('../../../fonts/icomoon.woff?k6miww') format('woff'),
+		url('../../../fonts/icomoon.svg?k6miww#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
