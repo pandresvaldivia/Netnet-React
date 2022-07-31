@@ -9,10 +9,15 @@ export const getGenreByName = async (
 	try {
 		const response = await fetch(gendersUrl);
 		const data = await response.json();
-		const genre = data.genres.find((item) => item.name === name);
+		const genre = data.genres.find((item: Genre) => item.name === name);
 		return genre ? genre.id : '';
 	} catch (error) {
 		console.log(error);
 		return '';
 	}
+};
+
+type Genre = {
+	id: number;
+	name: string;
 };
