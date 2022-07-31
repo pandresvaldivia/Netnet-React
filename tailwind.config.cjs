@@ -20,6 +20,9 @@ module.exports = {
 			spacing: {
 				137: '34.25rem',
 			},
+			zIndex: {
+				1: '1',
+			},
 		},
 	},
 	plugins: [],

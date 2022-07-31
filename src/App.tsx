@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Menu from './common/components/molecules/Menu';
+import Menu from './common/components/molecules/Navigation';
 import Home from './pages/Home';
 import Search from './pages/Search';
 

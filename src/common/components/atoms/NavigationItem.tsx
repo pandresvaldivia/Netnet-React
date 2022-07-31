@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-const MenuItem = ({ text, icon, link }: MenuItemProps) => {
+const NavigationItem = ({ text, icon, link }: NavigationItemProps) => {
 	return (
 		<NavLink
 			to={link}
@@ -15,10 +15,10 @@ const MenuItem = ({ text, icon, link }: MenuItemProps) => {
 		</NavLink>
 	);
 };
-type MenuItemProps = {
+type NavigationItemProps = {
 	text: string;
 	icon: string;
 	link: string;
 };
 
-export default MenuItem;
+export default NavigationItem;
