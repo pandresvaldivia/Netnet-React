@@ -17,6 +17,9 @@ module.exports = {
 				'netnet-grey': '#686868',
 				'netnet-red': '#d22f26',
 			},
+			spacing: {
+				137: '34.25rem',
+			},
 		},
 	},
 	plugins: [],

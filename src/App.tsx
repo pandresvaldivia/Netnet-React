@@ -5,14 +5,16 @@ import Search from './pages/Search';
 
 const App = () => {
 	return (
-		<main>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/search" element={<Search />} />
-				<Route path="/*" element={<Navigate to="/" />} />
-			</Routes>
+		<>
+			<main className="pb-16">
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/search" element={<Search />} />
+					<Route path="/*" element={<Navigate to="/" />} />
+				</Routes>
+			</main>
 			<Menu />
-		</main>
+		</>
 	);
 };
 
