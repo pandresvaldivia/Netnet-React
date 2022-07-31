@@ -5,10 +5,11 @@ module.exports = {
 		fontFamily: {
 			sans: ['Avenir Next', 'sans-serif'],
 		},
-		fontSize: {
-			subtitle: ['17.5px', '1.4em'],
-		},
 		extend: {
+			fontSize: {
+				tiny: ['0.7rem', '1.4em'],
+				subtitle: ['17.5px', '1.4em'],
+			},
 			aspectRatio: {
 				poster: '2/3',
 			},
