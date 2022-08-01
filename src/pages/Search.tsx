@@ -1,5 +1,7 @@
+import SearchView from '../modules/SearchView';
+
 const Search = () => {
-	return <div>Search</div>;
+	return <SearchView />;
 };
 
 export default Search;

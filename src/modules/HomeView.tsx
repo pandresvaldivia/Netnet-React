@@ -5,7 +5,6 @@ import Hero from '../common/components/organims/Hero';
 const HomeView = () => {
 	return (
 		<div className="relative pb-2">
-			<HomeHeader />
 			<Hero />
 			<Catalog />
 		</div>

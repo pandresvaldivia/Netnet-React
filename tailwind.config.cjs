@@ -8,6 +8,7 @@ module.exports = {
 		extend: {
 			fontSize: {
 				tiny: ['0.7rem', '1.4em'],
+				smaller: ['13px', '1.4em'],
 				subtitle: ['17.5px', '1.4em'],
 			},
 			aspectRatio: {
@@ -16,6 +17,7 @@ module.exports = {
 			colors: {
 				'netnet-grey': '#686868',
 				'netnet-red': '#d22f26',
+				'netnet-dark': '#1f1f1f',
 			},
 			spacing: {
 				137: '34.25rem',
