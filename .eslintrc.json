@@ -1,12 +1,14 @@
 {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es2021": true,
+		"node": true
 	},
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
-		"plugin:@typescript-eslint/recommended"
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -31,11 +33,7 @@
 		"no-empty-function": "off",
 		"@typescript-eslint/no-empty-function": "error",
 		"@typescript-eslint/no-this-alias": "error",
-		"react/function-component-definition": [
-			"error",
-			{ "namedComponents": "arrow-function" }
-		],
-		"indent": ["error", "tab"],
+		"react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
 		"linebreak-style": ["error", "windows"],
 		"quotes": ["error", "single"],
 		"semi": ["error", "always"],

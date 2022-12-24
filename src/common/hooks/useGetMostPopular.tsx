@@ -10,9 +10,7 @@ const useGetMostPopular = () => {
 
 	useEffect(() => {
 		(async () => {
-			const response = await fetch(
-				`https://api.themoviedb.org/3/movie/popular?api_key=${key}`
-			);
+			const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${key}`);
 
 			const mostPopularMovies = await response.json();
 

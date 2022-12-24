@@ -1,9 +1,6 @@
 const KEY = import.meta.env.VITE_API_KEY;
 
-export const getGenreByName = async (
-	name: string,
-	type: string
-): Promise<string> => {
+export const getGenreByName = async (name: string, type: string): Promise<string> => {
 	const gendersUrl = `https://api.themoviedb.org/3/genre/${type}/list?api_key=${KEY}`;
 
 	try {

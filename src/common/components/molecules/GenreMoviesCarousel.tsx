@@ -3,10 +3,7 @@ import MovieCarousel from '../../templates/MovieCarousel';
 import SeriesCarousel from '../../templates/SeriesCarousel';
 import CourselSkeleton from '../atoms/CourselSkeleton';
 
-const GenreCatalogCarousel = ({
-	genre,
-	type = 'movie',
-}: GenreMoviesCarouselProps) => {
+const GenreCatalogCarousel = ({ genre, type = 'movie' }: GenreMoviesCarouselProps) => {
 	const { movies, isLoading } = useGetCatalogByGenre(genre, type);
 
 	if (isLoading) return <CourselSkeleton />;
