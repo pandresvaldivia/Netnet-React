@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+
 import { handleVisibility } from '../../helpers/page-visibility.helper';
 import HeroDetails from '../molecules/HeroDetails';
 

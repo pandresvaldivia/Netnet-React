@@ -1,3 +1,3 @@
-export const isArrayEmpty = (arr: any[]): boolean => {
+export const isArrayEmpty = (arr: unknown[]): boolean => {
 	return arr.length === 0;
 };

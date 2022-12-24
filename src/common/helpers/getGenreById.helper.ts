@@ -12,7 +12,7 @@ export const getGenreByName = async (
 		const genre = data.genres.find((item: Genre) => item.name === name);
 		return genre ? genre.id : '';
 	} catch (error) {
-		console.log(error);
+		console.error(error);
 		return '';
 	}
 };

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 
+const key = import.meta.env.VITE_API_KEY;
+
 const useGetMostPopular = () => {
 	const [data, setData] = useState({
 		movies: [],
 		isLoading: true,
 	});
-	const key = import.meta.env.VITE_API_KEY;
 
 	useEffect(() => {
 		(async () => {
@@ -13,10 +14,10 @@ const useGetMostPopular = () => {
 				`https://api.themoviedb.org/3/movie/popular?api_key=${key}`
 			);
 
-			const data = await response.json();
+			const mostPopularMovies = await response.json();
 
 			setData({
-				movies: data.results,
+				movies: mostPopularMovies.results,
 				isLoading: false,
 			});
 		})();

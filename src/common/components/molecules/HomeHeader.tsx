@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+
 import Avatar from '../atoms/Avatar';
+
 import HeaderMenu from './HeaderMenu';
 
 const HomeHeader = () => {

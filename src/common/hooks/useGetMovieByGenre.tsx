@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { getGenreByName } from '../helpers/getGenreById.helper';
 
 const KEY = import.meta.env.VITE_API_KEY;
@@ -17,10 +18,10 @@ const useGetCatalogByGenre = (genre: string, type = 'movie') => {
 				`https://api.themoviedb.org/3/discover/${type}?api_key=${KEY}&with_genres=${genreId}`
 			);
 
-			const data = await response.json();
+			const catalog = await response.json();
 
 			setData({
-				movies: data.results,
+				movies: catalog.results,
 				isLoading: false,
 			});
 		})();

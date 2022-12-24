@@ -2,7 +2,7 @@ const ActionButton = ({
 	text,
 	icon,
 	className,
-	onClick = () => {},
+	onClick,
 }: ActionButtonProps) => {
 	return (
 		<button
