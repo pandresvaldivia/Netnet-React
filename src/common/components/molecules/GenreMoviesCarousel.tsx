@@ -1,24 +1,27 @@
-import useGetCatalogByGenre from '../../hooks/useGetMovieByGenre';
+import { CatalogApi } from '../../../api/v3/catalog.api';
+import { GenresCarousel } from '../../constants/carousel.constant';
+import useFetch from '../../hooks/useFetch';
+import { CatalogResponse } from '../../interfaces/movie.interface';
 import MovieCarousel from '../../templates/MovieCarousel';
-import SeriesCarousel from '../../templates/SeriesCarousel';
 import CourselSkeleton from '../atoms/CourselSkeleton';
 
-const GenreCatalogCarousel = ({ genre, type = 'movie' }: GenreMoviesCarouselProps) => {
-	const { movies, isLoading } = useGetCatalogByGenre(genre, type);
+const GenreCatalogCarousel = ({ genre }: GenreMoviesCarouselProps) => {
+	const { id, title, type } = genre;
+	const { data, isLoading, error } = useFetch<CatalogResponse>(
+		CatalogApi.seriesMoviesByGenre(type, id)
+	);
 
 	if (isLoading) return <CourselSkeleton />;
 
-	return (
-		<>
-			{type !== 'tv' && <MovieCarousel title={genre} movies={movies} />}
-			{type === 'tv' && <SeriesCarousel title={genre} series={movies} />}
-		</>
-	);
+	if (error || !data) return <p>Something went wrong</p>;
+
+	const catalog = data.results;
+
+	return <MovieCarousel title={title} movies={catalog} type={type} />;
 };
 
 type GenreMoviesCarouselProps = {
-	genre: string;
-	type?: 'movie' | 'tv';
+	genre: GenresCarousel;
 };
 
 export default GenreCatalogCarousel;

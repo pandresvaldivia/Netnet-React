@@ -6,7 +6,7 @@ import MovieCarousel from '../../templates/MovieCarousel';
 import CourselSkeleton from '../atoms/CourselSkeleton';
 
 const PopularMoviesCarousel = () => {
-	const { data, isLoading, error } = useFetch<MovieResponse>(CatalogApi.mostPopularMovies);
+	const { data, isLoading, error } = useFetch<MovieResponse>(CatalogApi.mostPopularMovies());
 
 	if (isLoading) return <CourselSkeleton />;
 

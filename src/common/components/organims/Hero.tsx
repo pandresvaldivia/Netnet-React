@@ -37,6 +37,7 @@ const Hero = () => {
 			<button
 				className="absolute text-white right-4 bottom-36 bg-black/50 h-8 aspect-square rounded-full"
 				onClick={() => setIsMuted(!isMuted)}
+				aria-label={isMuted ? 'Activate sound' : 'Mute sound'}
 			>
 				<span className="relative top-px left-px">
 					{isMuted && <i className="icon-muted" />}
