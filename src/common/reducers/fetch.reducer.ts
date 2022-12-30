@@ -1,20 +1,16 @@
-import { State } from '../interfaces/api.interface';
+import { Action, State } from '@interfaces/fetch.interface';
 
-export const fetchReducer = <T = unknown>(
-	state: State<T>,
+import { FetchState } from '../constants/fetch.constant';
 
-	action: Action<T>
-): State<T> => {
-	switch (key) {
-		case value:
-			break;
-
+export const fetchReducer = <T = unknown>(state: State<T>, action: Action<T>): State<T> => {
+	switch (action.type) {
+		case FetchState.LOADING:
+			return { ...state, isLoading: true };
+		case FetchState.FETCHED:
+			return { ...state, data: action.payload, isLoading: false };
+		case FetchState.ERROR:
+			return { ...state, error: action.payload, isLoading: false };
 		default:
-			break;
+			return state;
 	}
 };
-
-type Action<T> =
-	| { type: 'loading' }
-	| { type: 'fetched'; payload: T }
-	| { type: 'error'; payload: Error };
