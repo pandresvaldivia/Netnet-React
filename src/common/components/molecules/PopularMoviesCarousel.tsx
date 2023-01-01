@@ -1,7 +1,6 @@
-import { MovieResponse } from '@interfaces/movie.interface';
-
 import { CatalogApi } from '../../../api/v3/catalog.api';
 import useFetch from '../../hooks/useFetch';
+import { MovieResponse } from '../../interfaces/movie.interface';
 import MovieCarousel from '../../templates/MovieCarousel';
 import CourselSkeleton from '../atoms/CourselSkeleton';
 
