@@ -1,4 +1,4 @@
-import Avatar from '../atoms/Avatar';
+import UserMenu from './UserMenu';
 
 const Header = () => {
 	const handleBack = () => {
@@ -10,7 +10,7 @@ const Header = () => {
 			<button className="text-white" onClick={handleBack}>
 				<i className="icon-back text-2xl align-middle" />
 			</button>
-			<Avatar />
+			<UserMenu />
 		</header>
 	);
 };

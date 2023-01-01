@@ -1,18 +1,14 @@
-import { Link } from 'react-router-dom';
-
-const Avatar = () => {
+const Avatar = ({ image, alt = 'User avatar' }: AvatarProps) => {
 	return (
-		<Link to="profile">
-			<figure className="h-6 aspect-square rounded overflow-hidden">
-				<img
-					src="/images/utils/avatar.webp"
-					alt="User avatar"
-					height="24"
-					width="24"
-				/>
-			</figure>
-		</Link>
+		<figure className="h-6 aspect-square rounded overflow-hidden">
+			<img src={image} alt={alt} height="24" width="24" />
+		</figure>
 	);
+};
+
+type AvatarProps = {
+	image: string;
+	alt?: string;
 };
 
 export default Avatar;

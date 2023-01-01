@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import Avatar from '../atoms/Avatar';
-
 import HeaderMenu from './HeaderMenu';
+import UserMenu from './UserMenu';
 
 const HomeHeader = () => {
 	return (
@@ -12,7 +11,7 @@ const HomeHeader = () => {
 					<Link to="/">
 						<img src="/images/logo/logo.png" alt="netnet logo" />
 					</Link>
-					<Avatar />
+					<UserMenu />
 				</div>
 				<HeaderMenu />
 			</header>

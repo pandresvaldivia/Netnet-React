@@ -7,6 +7,7 @@ const MovieCard = ({ title, poster }: MovieCardProps) => {
 					src={`https://image.tmdb.org/t/p/original${poster}`}
 					height="144"
 					width="96"
+					loading="lazy"
 					alt={title}
 				/>
 			</a>
