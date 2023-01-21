@@ -33,7 +33,10 @@
 		"no-empty-function": "off",
 		"@typescript-eslint/no-empty-function": "error",
 		"@typescript-eslint/no-this-alias": "error",
-		"react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
+		"react/function-component-definition": [
+			"error",
+			{ "namedComponents": "arrow-function" }
+		],
 		"linebreak-style": ["error", "windows"],
 		"quotes": ["error", "single"],
 		"semi": ["error", "always"],
@@ -41,6 +44,17 @@
 			"error",
 			{
 				"allow": ["warn", "error"]
+			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"printWidth": 100,
+				"singleQuote": true,
+				"trailingComma": "es5",
+				"tabWidth": 2,
+				"useTabs": true,
+				"endOfLine": "crlf"
 			}
 		]
 	},

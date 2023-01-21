@@ -17,8 +17,12 @@ module.exports = {
 			},
 			colors: {
 				'netnet-grey': '#686868',
+				'netnet-grey-100': '#333333',
+				'netnet-grey-200': '#8c8c8c',
 				'netnet-red': '#d22f26',
+				'netnet-red-100': '#e50914',
 				'netnet-dark': '#1f1f1f',
+				'netnet-orange': '#e87c03',
 			},
 			spacing: {
 				137: '34.25rem',

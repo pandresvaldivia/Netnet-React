@@ -1,4 +1,4 @@
-import SearchView from '../modules/SearchView';
+import SearchView from '../modules/Search/SearchView';
 
 const Search = () => {
 	return <SearchView />;

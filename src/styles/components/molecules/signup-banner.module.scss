@@ -1,0 +1,16 @@
+.banner {
+	background-image: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.8) 0,
+			transparent 40%,
+			transparent 75%,
+			rgba(0, 0, 0, 0.8)
+		),
+		url('/images/utils/singup/singup-background.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.bannerContent {
+	background: rgba(0, 0, 0, 0.4);
+}

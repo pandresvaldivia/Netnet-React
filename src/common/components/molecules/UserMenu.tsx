@@ -1,3 +1,4 @@
+import { singOut } from '../../../services/helpers/auth.helper';
 import { PROFILES } from '../../constants/profiles.constant';
 import Avatar from '../atoms/Avatar';
 import UserMenuProfile from '../atoms/items/UserMenuProfile';
@@ -18,7 +19,9 @@ const UserMenu = () => {
 				</div>
 				<hr className="border-white/25 " />
 				<div className="py-2.5">
-					<Dropdown.Item className="py-1.5 px-2.5 w-full">Sign out of Netnet</Dropdown.Item>
+					<Dropdown.Item onClick={singOut} className="py-1.5 px-2.5 w-full">
+						Sign out of Netnet
+					</Dropdown.Item>
 				</div>
 			</Dropdown.List>
 		</Dropdown>

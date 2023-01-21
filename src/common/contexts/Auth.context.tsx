@@ -21,8 +21,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 					replace: true,
 				});
 			} else {
-				// User is signed out
-				// ...
+				setIsAuthenticated(false);
 			}
 		});
 	}, []);

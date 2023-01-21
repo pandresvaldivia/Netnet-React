@@ -1,0 +1,10 @@
+.input {
+	&:focus,
+	&:focus-within,
+	&.hasValue {
+		& + label {
+			transform: translateY(-1.25rem);
+			font-size: 11px;
+		}
+	}
+}

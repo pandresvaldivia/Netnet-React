@@ -16,21 +16,21 @@
 		"noEmit": true,
 		"jsx": "react-jsx",
 		// Paths
-		"baseUrl": "src",
+		"baseUrl": ".",
 		"paths": {
-      "@modules/*": ["modules/*"],
-      "@components/*": ["common/components/*"],
-      "@atoms/*": ["common/components/atoms/*"],
-      "@molecules/*": ["common/components/molecules/*"],
-      "@organisms/*": ["common/components/organisms/*"],
-      "@constants/*": ["common/constants/*"],
-      "@contexts/*": ["common/contexts/*"],
-      "@helpers/*": ["common/helpers/*"],
-      "@hooks/*": ["common/hooks/*"],
-      "@interfaces/*": ["common/interfaces/*"],
-      "@services/*": ["services/*"],
-      "@api/*": ["common/api/*"]
-    }
+			"@modules/*": ["./src/modules/*"],
+			"@components/*": ["./src/common/components/*"],
+			"@atoms/*": ["./src/common/components/atoms/*"],
+			"@molecules/*": ["./src/common/components/molecules/*"],
+			"@organisms/*": ["./src/common/components/organisms/*"],
+			"@constants/*": ["./src/common/constants/*"],
+			"@contexts/*": ["./src/common/contexts/*"],
+			"@helpers/*": ["src/common/helpers/*"],
+			"@hooks/*": ["./src/common/hooks/*"],
+			"@interfaces/*": ["./src/common/interfaces/*"],
+			"@services/*": ["services/*"],
+			"@api/*": ["./src/common/api/*"]
+		}
 	},
 	"include": ["src"],
 	"references": [{ "path": "./tsconfig.node.json" }],
