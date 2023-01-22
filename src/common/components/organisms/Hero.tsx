@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import { HeroDetails } from '@molecules';
 
 import { handleVisibility } from '../../helpers/page-visibility.helper';
-import HeroDetails from '../molecules/HeroDetails';
 
 const Hero = () => {
 	const [isMuted, setIsMuted] = useState(true);

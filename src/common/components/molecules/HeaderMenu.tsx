@@ -1,4 +1,4 @@
-import HeaderMenuItem from '../atoms/HeaderMenuItem';
+import { HeaderMenuItem } from '@atoms';
 
 const HeaderMenu = () => {
 	return (

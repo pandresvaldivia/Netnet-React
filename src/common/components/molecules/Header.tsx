@@ -6,7 +6,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className="flex justify-between p-4 pr-2 bg-black sticky top-0">
+		<header className="flex justify-between p-4 pr-2 bg-black sticky top-0 z-1">
 			<button className="text-white" onClick={handleBack}>
 				<i className="icon-back text-2xl align-middle" />
 			</button>

@@ -1,9 +1,8 @@
+import { Avatar, UserMenuProfile } from '@atoms';
+import { Dropdown } from '@molecules';
+
 import { singOut } from '../../../services/helpers/auth.helper';
 import { PROFILES } from '../../constants/profiles.constant';
-import Avatar from '../atoms/Avatar';
-import UserMenuProfile from '../atoms/items/UserMenuProfile';
-
-import Dropdown from './Dropdown/index';
 
 const UserMenu = () => {
 	return (

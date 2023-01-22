@@ -1,6 +1,6 @@
+import { Loader } from '@atoms';
 import { Route, Routes } from 'react-router-dom';
 
-import Loader from '../common/components/atoms/Loader';
 import { useAuthContext } from '../common/contexts/Auth.context';
 
 import LogoutRoutes from './routes/LogoutRoutes';

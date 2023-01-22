@@ -1,5 +1,5 @@
-import Dropdown from '../../molecules/Dropdown/index';
-import Avatar from '../Avatar';
+import { Avatar } from '@atoms';
+import { Dropdown } from '@molecules';
 
 const UserMenuProfile = ({ image, name }: UserMenuProfileProps) => {
 	return (

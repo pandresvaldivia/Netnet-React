@@ -1,4 +1,4 @@
-import NavigationItem from '../atoms/NavigationItem';
+import { NavigationItem } from '@atoms';
 
 const Navigation = () => {
 	return (

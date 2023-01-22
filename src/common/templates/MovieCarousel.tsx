@@ -1,4 +1,5 @@
-import MovieCard from '../components/atoms/MovieCard';
+import { MovieCard } from '@atoms';
+
 import { CarouselType } from '../constants/carousel.constant';
 import { Movie, Series } from '../interfaces/movie.interface';
 
@@ -11,7 +12,7 @@ const MovieCarousel = ({ movies, title, type = CarouselType.MOVIE }: MovieCarous
 					const { poster_path, id } = movie;
 					const itemTitle = type === CarouselType.MOVIE ? movie.title : movie.name;
 
-					return <MovieCard key={id} title={itemTitle} poster={poster_path} />;
+					return <MovieCard key={id} title={itemTitle} poster={poster_path} id={id} />;
 				})}
 			</div>
 		</section>

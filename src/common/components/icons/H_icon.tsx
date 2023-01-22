@@ -1,0 +1,8 @@
+import { Icon } from './icon';
+
+export const home = new Icon(
+	'0 0 24 24',
+	(
+		<path d="M12 2.09961L1 12H4V21H11V15H13V21H20V12H23L12 2.09961ZM12 4.79102L18 10.1914V11V19H15V13H9V19H6V10.1914L12 4.79102Z" />
+	)
+);

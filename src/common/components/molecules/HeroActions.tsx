@@ -1,5 +1,4 @@
-import ActionButton from '../atoms/ActionButton';
-import Button from '../atoms/Button';
+import { ActionButton, Button } from '@atoms';
 
 const HeroActions = () => {
 	return (

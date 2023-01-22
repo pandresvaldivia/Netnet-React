@@ -1,6 +1,5 @@
+import { LogoutHeader } from '@molecules';
 import classNames from 'classnames';
-
-import LogoutHeader from '../../common/components/molecules/LogoutHeader';
 
 import SignupForm from './components/SignupForm';
 

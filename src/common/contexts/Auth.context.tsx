@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import auth from '../../services/firebase/firestore.service';
 
@@ -10,6 +10,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 	const navigate = useNavigate();
 	const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 	const [isLoading, setIsLoading] = useState<boolean>(true);
+	const currentPath = useLocation().pathname;
 
 	useEffect(() => {
 		onAuthStateChanged(auth, (user) => {
@@ -17,7 +18,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 
 			if (user) {
 				setIsAuthenticated(true);
-				navigate('/browse', {
+				navigate(currentPath, {
 					replace: true,
 				});
 			} else {

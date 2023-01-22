@@ -20,9 +20,9 @@
 		"paths": {
 			"@modules/*": ["./src/modules/*"],
 			"@components/*": ["./src/common/components/*"],
-			"@atoms/*": ["./src/common/components/atoms/*"],
-			"@molecules/*": ["./src/common/components/molecules/*"],
-			"@organisms/*": ["./src/common/components/organisms/*"],
+			"@atoms": ["./src/common/components/atoms/index"],
+			"@molecules": ["./src/common/components/molecules/index"],
+			"@organisms": ["./src/common/components/organisms/index"],
 			"@constants/*": ["./src/common/constants/*"],
 			"@contexts/*": ["./src/common/contexts/*"],
 			"@helpers/*": ["src/common/helpers/*"],

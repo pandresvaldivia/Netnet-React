@@ -1,7 +1,9 @@
-const MovieCard = ({ title, poster }: MovieCardProps) => {
+import { Link } from 'react-router-dom';
+
+const MovieCard = ({ title, poster, id }: MovieCardProps) => {
 	return (
 		<article className="aspect-poster w-24 rounded-sm overflow-hidden flex-shrink-0">
-			<a href="#">
+			<Link to={`/title/${id}`}>
 				<img
 					className="align-middle w-full"
 					src={`https://image.tmdb.org/t/p/original${poster}`}
@@ -10,7 +12,7 @@ const MovieCard = ({ title, poster }: MovieCardProps) => {
 					loading="lazy"
 					alt={title}
 				/>
-			</a>
+			</Link>
 		</article>
 	);
 };
@@ -18,6 +20,7 @@ const MovieCard = ({ title, poster }: MovieCardProps) => {
 type MovieCardProps = {
 	title: string;
 	poster: string;
+	id: number;
 };
 
 export default MovieCard;

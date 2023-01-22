@@ -1,5 +1,4 @@
-import Catalog from '../../common/components/organims/Catalog';
-import Hero from '../../common/components/organims/Hero';
+import { Catalog, Hero } from '@organisms';
 
 const HomeView = () => {
 	return (
