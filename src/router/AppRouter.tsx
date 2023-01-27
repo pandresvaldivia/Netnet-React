@@ -11,7 +11,12 @@ import PublicRoute from './routes/PublicRoute';
 const AppRouter = () => {
 	const { isAuthenticated, isLoading } = useAuthContext();
 
-	if (isLoading) return <Loader />;
+	if (isLoading)
+		return (
+			<div className="flex h-screen w-screen items-center justify-center">
+				<Loader />
+			</div>
+		);
 
 	return (
 		<Routes>

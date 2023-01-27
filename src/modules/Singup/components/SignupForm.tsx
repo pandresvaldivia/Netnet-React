@@ -1,6 +1,11 @@
+import { Loader } from '@components/atoms';
+import { chevron_right } from '@components/icons/C_icon';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { AuthFormData } from '@interfaces/form.interface';
+import classNames from 'classnames';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import IconWrapper from 'src/common/templates/IconWrapper';
 
 import { userAuthSchema } from '../../../common/schemas/user-auth';
 import { registerUser } from '../../../services/helpers/auth.helper';
@@ -16,17 +21,24 @@ const SignupForm = () => {
 		watch,
 		register,
 		handleSubmit,
-		formState: { errors },
+		formState: { errors, isSubmitting },
 	} = useForm<AuthFormData>({
 		defaultValues: initialState,
 		mode: 'onTouched',
 		resolver: joiResolver(userAuthSchema),
 	});
+	const navigation = useNavigate();
 
-	const onSubmit = (data: AuthFormData) => {
+	const onSubmit = async (data: AuthFormData) => {
 		const { email, password } = data;
 
-		registerUser(email, password);
+		const { redirect } = await registerUser(email, password);
+
+		if (redirect) {
+			navigation(`/login?email=${email}`, {
+				replace: true,
+			});
+		}
 	};
 
 	return (
@@ -57,7 +69,21 @@ const SignupForm = () => {
 					{...register('password')}
 				/>
 			</div>
-			<button className="text-base bg-netnet-red-100 text-white px-4 py-2">Get Started</button>
+			<button
+				disabled={isSubmitting}
+				className={classNames(
+					{ 'bg-netnet-red-100/50 w-32': isSubmitting },
+					'flex items-center justify-center gap-2 text-base bg-netnet-red-100 text-white px-4 py-2'
+				)}
+			>
+				{!isSubmitting && (
+					<>
+						<span>Get Started</span>
+						<IconWrapper icon={chevron_right} height="0.75rem" />
+					</>
+				)}
+				{isSubmitting && <Loader className="border-t-white h-7 -my-0.5" />}
+			</button>
 		</form>
 	);
 };

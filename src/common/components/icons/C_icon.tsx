@@ -15,3 +15,8 @@ export const cinema = new Icon(
 		</>
 	)
 );
+
+export const chevron_right = new Icon(
+	'0 0 6 12',
+	<path d="M.61 1.312l.78-.624L5.64 6l-4.25 5.312-.78-.624L4.36 6z" fillRule="evenodd" />
+);
