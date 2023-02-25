@@ -1,8 +1,14 @@
+import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
-const MovieCard = ({ title, poster, id }: MovieCardProps) => {
+const MovieCard = ({ title, poster, id, className }: MovieCardProps) => {
 	return (
-		<article className="aspect-poster w-24 rounded-sm overflow-hidden flex-shrink-0">
+		<article
+			className={classNames(
+				className,
+				'aspect-poster w-24 rounded-sm overflow-hidden flex-shrink-0'
+			)}
+		>
 			<Link to={`/title/${id}`}>
 				<img
 					className="align-middle w-full"
@@ -21,6 +27,7 @@ type MovieCardProps = {
 	title: string;
 	poster: string;
 	id: number;
+	className?: string;
 };
 
 export default MovieCard;
