@@ -1,11 +1,13 @@
+import { Icon } from '@components/icons/icon';
+import IconWrapper from 'src/common/templates/IconWrapper';
+
 const ActionButton = ({ text, icon, className, onClick }: ActionButtonProps) => {
 	return (
 		<button
 			className={`${className} flex flex-col gap-1 items-center text-white`}
 			onClick={onClick}
 		>
-			<i className={`${icon} text-2xl`} />
-
+			<IconWrapper icon={icon} height="1.5rem" width="1.5rem" className="h-6 w-6" />
 			<span className="text-tiny font-semibold">{text}</span>
 		</button>
 	);
@@ -13,7 +15,7 @@ const ActionButton = ({ text, icon, className, onClick }: ActionButtonProps) => 
 
 type ActionButtonProps = {
 	text: string;
-	icon: string;
+	icon: Icon;
 	className?: string;
 	onClick?: () => void;
 };

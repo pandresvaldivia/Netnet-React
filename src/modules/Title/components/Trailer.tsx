@@ -4,9 +4,12 @@ import useFetch from '@hooks/useFetch';
 import { MovieTrailer } from '@interfaces/movie-trailer';
 import ReactPlayer from 'react-player/youtube';
 
+import { useTitleContext } from '../contexts/Title.context';
+
 import PlayButton from './PlayButton';
 
-const Trailer = ({ id, poster }: TrailerProps) => {
+const Trailer = () => {
+	const { id, backdrop_path: poster, title } = useTitleContext();
 	const [muted, setMuted] = useState<boolean>(true);
 	const [isPlaying, setIsPlaying] = useState<boolean>(true);
 	const { data, isLoading, error } = useFetch<MovieTrailer>(
@@ -16,7 +19,7 @@ const Trailer = ({ id, poster }: TrailerProps) => {
 	if (!data || isLoading || error)
 		return (
 			<div className="w-full h-40 overflow-hidden">
-				<img src={`https://image.tmdb.org/t/p/original/${poster}`} alt="" />
+				<img src={`https://image.tmdb.org/t/p/original/${poster}`} alt={`${title} poster`} />
 			</div>
 		);
 
@@ -54,11 +57,6 @@ const Trailer = ({ id, poster }: TrailerProps) => {
 			<MuteButton handleMute={handleMute} muted={muted} />
 		</section>
 	);
-};
-
-type TrailerProps = {
-	id: string;
-	poster: string;
 };
 
 export default Trailer;

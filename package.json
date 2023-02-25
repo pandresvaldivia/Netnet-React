@@ -12,6 +12,8 @@
 		"@hookform/resolvers": "^2.9.10",
 		"autoprefixer": "^10.4.7",
 		"classnames": "^2.3.2",
+		"dexie": "^3.2.3",
+		"dexie-react-hooks": "^1.1.1",
 		"eslint": "^8.30.0",
 		"eslint-plugin-simple-import-sort": "^8.0.0",
 		"firebase": "^9.12.1",
@@ -23,6 +25,7 @@
 		"react-hook-form": "^7.42.1",
 		"react-player": "^2.11.0",
 		"react-router-dom": "6",
+		"react-share": "^4.4.1",
 		"tailwindcss": "^3.1.6",
 		"vite-tsconfig-paths": "^4.0.5"
 	},
