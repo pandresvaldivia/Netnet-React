@@ -20,3 +20,17 @@ export const chevron_right = new Icon(
 	'0 0 6 12',
 	<path d="M.61 1.312l.78-.624L5.64 6l-4.25 5.312-.78-.624L4.36 6z" fillRule="evenodd" />
 );
+
+export const check = new Icon(
+	'0 0 24 24',
+	(
+		<path d="M9.29448 18.2791L3 11.9847L4.57362 10.411L9.29448 15.1319L19.4264 5L21 6.57362L9.29448 18.2791Z" />
+	)
+);
+
+export const cross = new Icon(
+	'0 0 24 24',
+	(
+		<path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" />
+	)
+);

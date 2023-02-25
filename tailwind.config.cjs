@@ -35,6 +35,9 @@ module.exports = {
 			zIndex: {
 				1: '1',
 			},
+			transitionDelay: {
+				400: '400ms',
+			},
 		},
 	},
 	plugins: [],

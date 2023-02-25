@@ -1,10 +1,9 @@
-import { MovieTitle } from '@interfaces/movie-title.interface';
-
+import { useTitleContext } from '../contexts/Title.context';
 import { getYear, minutesToHours } from '../helpers/date';
 import { getRatingPercentage } from '../helpers/number';
 
-const Details = ({ data }: DetailsProps) => {
-	const { vote_average, release_date, runtime } = data;
+const Details = () => {
+	const { vote_average, release_date, runtime } = useTitleContext();
 
 	const rating = getRatingPercentage(vote_average);
 	const release_year = getYear(release_date);
@@ -25,10 +24,6 @@ const Details = ({ data }: DetailsProps) => {
 			</div>
 		</div>
 	);
-};
-
-type DetailsProps = {
-	data: MovieTitle;
 };
 
 export default Details;
