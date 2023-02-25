@@ -1,5 +1,6 @@
 import ActionButtons from './components/ActionButtons';
 import Details from './components/Details';
+import MoreLikeThisSection from './components/more-like-this/MoreLikeThisSection';
 import TitleButtons from './components/TitleButtons';
 import TitleTeam from './components/TitleTeam';
 import Trailer from './components/Trailer';
@@ -11,7 +12,7 @@ const TitleView = () => {
 	return (
 		<main className="text-white">
 			<Trailer />
-			<section className="px-4 py-4">
+			<section className="px-4 py-4 mb-6">
 				<h1 className="text-headline-1 font-bold mb-2">{title}</h1>
 				<Details />
 				<TitleButtons />
@@ -19,6 +20,7 @@ const TitleView = () => {
 				<TitleTeam />
 				<ActionButtons />
 			</section>
+			<MoreLikeThisSection />
 		</main>
 	);
 };
