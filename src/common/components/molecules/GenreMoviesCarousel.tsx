@@ -1,7 +1,7 @@
 import { CourselSkeleton } from '@atoms';
+import { GenresCarousel } from '@interfaces/catalog.interface';
 
 import { CatalogApi } from '../../../api/v3/catalog.api';
-import { GenresCarousel } from '../../constants/carousel.constant';
 import useFetch from '../../hooks/useFetch';
 import { CatalogResponse } from '../../interfaces/movie.interface';
 import MovieCarousel from '../../templates/MovieCarousel';
