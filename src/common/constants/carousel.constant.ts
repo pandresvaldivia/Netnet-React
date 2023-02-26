@@ -1,3 +1,5 @@
+import { GenresCarousel } from '@interfaces/catalog.interface';
+
 import { CONTENT_TYPE } from './content.constant';
 import { GenresId } from './genres.constant';
 
@@ -29,8 +31,30 @@ export const GENRE_CAROUSELS: GenresCarousel[] = [
 	},
 ];
 
-export interface GenresCarousel {
-	id: GenresId;
-	title: string;
-	type: CONTENT_TYPE;
-}
+export const MOVIE_CAROUSELS: GenresCarousel[] = [
+	{
+		id: GenresId.ANIMATION,
+		title: 'Animation',
+		type: CONTENT_TYPE.MOVIE,
+	},
+	{
+		id: GenresId.ADVENTURE,
+		title: 'Adventure',
+		type: CONTENT_TYPE.MOVIE,
+	},
+	{
+		id: GenresId.CRIME,
+		title: 'Crime',
+		type: CONTENT_TYPE.MOVIE,
+	},
+	{
+		id: GenresId.COMEDY,
+		title: 'Comedy',
+		type: CONTENT_TYPE.MOVIE,
+	},
+	{
+		id: GenresId.ACTION,
+		title: 'Action movies',
+		type: CONTENT_TYPE.MOVIE,
+	},
+];

@@ -9,7 +9,7 @@ const ActionButtons = ({ title }: ActionButtonsProps) => {
 	return (
 		<ShareProvider>
 			<div className="flex gap-6">
-				<AddTitleButton title={title} />
+				<AddTitleButton title={title} className="text-netnet-grey" />
 				<RateButton id={id} />
 				<ShareButton />
 				<ModalShare />

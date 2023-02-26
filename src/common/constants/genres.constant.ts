@@ -4,4 +4,7 @@ export enum GenresId {
 	ACTION = 28,
 	DRAMA = 18,
 	HORROR = 27,
+	ADVENTURE = 12,
+	ANIMATION = 16,
+	CRIME = 80,
 }

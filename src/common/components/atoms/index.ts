@@ -6,6 +6,7 @@ export { default as CourselSkeleton } from './CourselSkeleton';
 export { default as HeaderMenuItem } from './items/HeaderMenuItem';
 export { default as NavigationItem } from './items/NavigationItem';
 export { default as UserMenuProfile } from './items/UserMenuProfile';
+export { default as LinkButton } from './LinkButton';
 export { default as Loader } from './Loader';
 export { default as MovieCard } from './MovieCard';
 export { default as MuteButton } from './MuteButton';

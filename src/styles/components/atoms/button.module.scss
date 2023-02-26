@@ -1,0 +1,11 @@
+.root {
+	@apply flex flex-col gap-1 items-center text-white;
+}
+
+.icon {
+	@apply w-6 h-6;
+}
+
+.text {
+	@apply text-tiny font-semibold;
+}
