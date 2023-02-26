@@ -1,3 +1,5 @@
+import { HERO_TITLE } from '@modules/Home/constants/hero.constant';
+
 import HeroActions from './HeroActions';
 
 const HeroDetails = ({ image, alt, tags }: HeroDetailsProps) => {
@@ -8,7 +10,7 @@ const HeroDetails = ({ image, alt, tags }: HeroDetailsProps) => {
 		>
 			<img src={image} alt={alt} height="64" width="312" />
 			<p className="text-tiny my-3 text-white">{tags}</p>
-			<HeroActions />
+			<HeroActions title={HERO_TITLE} link="/title/604" />
 		</section>
 	);
 };

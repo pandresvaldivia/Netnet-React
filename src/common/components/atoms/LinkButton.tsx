@@ -1,12 +1,13 @@
 import { Icon } from '@components/icons/icon';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 import IconWrapper from 'src/common/templates/IconWrapper';
 
 import ButtonStyles from '@styles/components/atoms/button.module.scss';
 
-const ActionButton = ({ text, icon, className, textClasses, onClick }: ActionButtonProps) => {
+const LinkButton = ({ text, icon, className, textClasses, link }: LinkButtonProps) => {
 	return (
-		<button className={classNames(ButtonStyles.root, className)} onClick={onClick}>
+		<Link to={link} className={classNames(ButtonStyles.root, className)}>
 			<IconWrapper
 				icon={icon}
 				height="1.5rem"
@@ -14,16 +15,16 @@ const ActionButton = ({ text, icon, className, textClasses, onClick }: ActionBut
 				className={classNames(ButtonStyles.icon)}
 			/>
 			<span className={classNames(ButtonStyles.text, textClasses)}>{text}</span>
-		</button>
+		</Link>
 	);
 };
 
-type ActionButtonProps = {
+type LinkButtonProps = {
 	text: string;
 	icon: Icon;
 	className?: string;
 	textClasses?: string;
-	onClick?: () => void;
+	link: string;
 };
 
-export default ActionButton;
+export default LinkButton;

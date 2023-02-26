@@ -1,16 +1,19 @@
+import { GenresCarousel } from '@interfaces/catalog.interface';
 import { GenreMoviesCarousel, PopularMoviesCarousel } from '@molecules';
 
-import { GENRE_CAROUSELS } from '../../constants/carousel.constant';
-
-const Catalog = () => {
+const Catalog = ({ carousels }: CatalogProps) => {
 	return (
 		<section aria-label="Netnet Catalog" className="flex flex-col gap-4">
 			<PopularMoviesCarousel />
-			{GENRE_CAROUSELS.map((genre) => {
+			{carousels.map((genre) => {
 				return <GenreMoviesCarousel key={genre.id} genre={genre} />;
 			})}
 		</section>
 	);
+};
+
+type CatalogProps = {
+	carousels: GenresCarousel[];
 };
 
 export default Catalog;
