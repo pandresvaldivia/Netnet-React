@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useContext } from 'react';
 import useFetch from '@hooks/useFetch';
 import { MovieTitle } from '@interfaces/movie-title.interface';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 
 const KEY = import.meta.env.VITE_API_KEY;
 
@@ -14,7 +14,9 @@ const TitleProvider = ({ children }: TitleProviderProvider) => {
 		`https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}&language=en-US`
 	);
 
-	if (!data || isLoading || error) return null;
+	if (isLoading) return null;
+
+	if (error || !data) return <Navigate to="/" />;
 
 	return <TitleContext.Provider value={data}>{children}</TitleContext.Provider>;
 };

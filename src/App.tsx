@@ -1,4 +1,5 @@
-import AuthProvider from './common/contexts/Auth.context';
+import { AuthProvider } from '@providers';
+
 import AppRouter from './router/AppRouter';
 
 const App = () => {

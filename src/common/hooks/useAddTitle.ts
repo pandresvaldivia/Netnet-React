@@ -1,18 +1,17 @@
 import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
+import { Title } from 'src/services/interfaces/storage';
 import { netnetDB } from 'src/services/storage/storage';
 
-import { useTitleContext } from '../contexts/Title.context';
-
-const useToggleTitle = () => {
-	const { title, backdrop_path, id } = useTitleContext();
-	const [titleAdded, setTitleAdded] = useState(false);
+const useAddTitle = (title: Title) => {
+	const { id } = title;
+	const [isAdded, setIsAdded] = useState(false);
 
 	useLiveQuery(async () => {
 		const currentTitle = await netnetDB.titles.get(id);
 
 		if (currentTitle) {
-			setTitleAdded(true);
+			setIsAdded(true);
 		}
 
 		return currentTitle;
@@ -20,32 +19,28 @@ const useToggleTitle = () => {
 
 	async function addTitle() {
 		try {
-			await netnetDB.titles.add({
-				id,
-				name: title,
-				poster: backdrop_path,
-			});
+			await netnetDB.titles.add(title);
 
-			setTitleAdded(true);
+			setIsAdded(true);
 		} catch (error) {
 			console.error(error);
 		}
 	}
 
 	const toggleTitle = () => {
-		if (!titleAdded) {
+		if (!isAdded) {
 			addTitle();
 			return;
 		}
 
-		setTitleAdded(false);
+		setIsAdded(false);
 		netnetDB.titles.delete(id);
 	};
 
 	return {
 		toggleTitle,
-		titleAdded,
+		isAdded,
 	};
 };
 
-export default useToggleTitle;
+export default useAddTitle;

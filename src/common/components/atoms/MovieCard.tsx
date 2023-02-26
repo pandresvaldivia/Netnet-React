@@ -1,7 +1,10 @@
+import { CONTENT_TYPE } from '@constants/content.constant';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
-const MovieCard = ({ title, poster, id, className }: MovieCardProps) => {
+const MovieCard = ({ title, poster, id, className, type }: MovieCardProps) => {
+	const cardLink = type === CONTENT_TYPE.SERIES ? `/tv/${id}?` : `/title/${id}`;
+
 	return (
 		<article
 			className={classNames(
@@ -9,7 +12,7 @@ const MovieCard = ({ title, poster, id, className }: MovieCardProps) => {
 				'aspect-poster w-24 rounded-sm overflow-hidden flex-shrink-0'
 			)}
 		>
-			<Link to={`/title/${id}`}>
+			<Link to={cardLink}>
 				<img
 					className="align-middle w-full"
 					src={`https://image.tmdb.org/t/p/original${poster}`}
@@ -28,6 +31,7 @@ type MovieCardProps = {
 	poster: string;
 	id: number;
 	className?: string;
+	type?: CONTENT_TYPE;
 };
 
 export default MovieCard;

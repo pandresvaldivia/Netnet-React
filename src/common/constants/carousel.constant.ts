@@ -1,40 +1,36 @@
+import { CONTENT_TYPE } from './content.constant';
 import { GenresId } from './genres.constant';
-
-export enum CarouselType {
-	MOVIE = 'movie',
-	SERIES = 'tv',
-}
 
 export const GENRE_CAROUSELS: GenresCarousel[] = [
 	{
 		id: GenresId.COMEDY,
 		title: 'Comedy movies',
-		type: CarouselType.MOVIE,
+		type: CONTENT_TYPE.MOVIE,
 	},
 	{
 		id: GenresId.MISTERY,
 		title: 'Mistery series',
-		type: CarouselType.MOVIE,
+		type: CONTENT_TYPE.SERIES,
 	},
 	{
 		id: GenresId.ACTION,
 		title: 'Action movies',
-		type: CarouselType.MOVIE,
+		type: CONTENT_TYPE.MOVIE,
 	},
 	{
 		id: GenresId.DRAMA,
 		title: 'Drama series',
-		type: CarouselType.MOVIE,
+		type: CONTENT_TYPE.SERIES,
 	},
 	{
 		id: GenresId.HORROR,
 		title: 'Horror movies',
-		type: CarouselType.MOVIE,
+		type: CONTENT_TYPE.MOVIE,
 	},
 ];
 
 export interface GenresCarousel {
 	id: GenresId;
 	title: string;
-	type: CarouselType;
+	type: CONTENT_TYPE;
 }
