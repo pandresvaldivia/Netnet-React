@@ -11,7 +11,7 @@ const useFetch = <T = unknown>(url?: string): State<T> => {
 	const initialState: State<T> = {
 		data: undefined,
 		error: undefined,
-		isLoading: false,
+		isLoading: true,
 	};
 
 	const [state, dispatch] = useReducer(fetchReducer<T>, initialState);

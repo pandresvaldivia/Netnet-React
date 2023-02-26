@@ -1,4 +1,5 @@
-import { CarouselType } from '../../common/constants/carousel.constant';
+import { CONTENT_TYPE } from '@constants/content.constant';
+
 import { GenresId } from '../../common/constants/genres.constant';
 import HttpsRequest from '../https-request.service';
 
@@ -13,7 +14,7 @@ export default class CatalogService extends HttpsRequest {
 		return this.urlBuilder();
 	}
 
-	getSeriesMoviesByGenre(type: CarouselType, genreId: GenresId) {
+	getSeriesMoviesByGenre(type: CONTENT_TYPE, genreId: GenresId) {
 		this.configRequest({
 			endpoint: `${CatalogEndpoints.TV_MOVIES}/${type}`,
 			params: `&with_genres=${genreId}`,

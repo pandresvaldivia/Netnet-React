@@ -23,6 +23,7 @@
 			"@atoms": ["./src/common/components/atoms/index"],
 			"@molecules": ["./src/common/components/molecules/index"],
 			"@organisms": ["./src/common/components/organisms/index"],
+			"@providers": ["./src/common/contexts/index"],
 			"@constants/*": ["./src/common/constants/*"],
 			"@contexts/*": ["./src/common/contexts/*"],
 			"@helpers/*": ["src/common/helpers/*"],

@@ -1,13 +1,20 @@
-import ActionButtons from './components/ActionButtons';
+import { ActionButtons } from '@molecules';
+import { MoreLikeThisSection } from '@organisms';
+
 import Details from './components/Details';
-import MoreLikeThisSection from './components/more-like-this/MoreLikeThisSection';
 import TitleButtons from './components/TitleButtons';
 import TitleTeam from './components/TitleTeam';
 import Trailer from './components/Trailer';
 import { useTitleContext } from './contexts/Title.context';
 
 const TitleView = () => {
-	const { title, overview } = useTitleContext();
+	const { title, overview, poster_path, id } = useTitleContext();
+
+	const movieTitle = {
+		id,
+		name: title,
+		poster: poster_path,
+	};
 
 	return (
 		<main className="text-white">
@@ -17,10 +24,10 @@ const TitleView = () => {
 				<Details />
 				<TitleButtons />
 				<p className="text-regular-1 mb-4">{overview}</p>
-				<TitleTeam />
-				<ActionButtons />
+				<TitleTeam id={id} />
+				<ActionButtons title={movieTitle} />
 			</section>
-			<MoreLikeThisSection />
+			<MoreLikeThisSection id={id} />
 		</main>
 	);
 };

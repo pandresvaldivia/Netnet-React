@@ -1,14 +1,12 @@
 import { MovieCard } from '@atoms';
+import { CONTENT_TYPE } from '@constants/content.constant';
 import useFetch from '@hooks/useFetch';
 import { Recommendation } from '@interfaces/recommendation.interface';
-import { useTitleContext } from '@modules/Title/contexts/Title.context';
 import { RecommendationApi } from 'src/api/v3/recommendation.api';
 
-const MoreLikeThisGrid = () => {
-	const { id } = useTitleContext();
-
+const MoreLikeThisGrid = ({ id, type }: MoreLikeThisGrid) => {
 	const { data, isLoading, error } = useFetch<Recommendation>(
-		RecommendationApi.getSimilarMovies(id)
+		RecommendationApi.getSimilarMovies(id, type)
 	);
 
 	if (isLoading) return <p>Loading...</p>;
@@ -28,12 +26,18 @@ const MoreLikeThisGrid = () => {
 						id={movieId}
 						title={title}
 						poster={poster_path}
-						className="w-full rounded-md"
+						className="!w-full rounded-md"
+						type={type}
 					/>
 				);
 			})}
 		</div>
 	);
+};
+
+type MoreLikeThisGrid = {
+	id: number;
+	type: CONTENT_TYPE;
 };
 
 export default MoreLikeThisGrid;

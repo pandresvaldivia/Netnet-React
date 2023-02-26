@@ -1,4 +1,5 @@
 export { default as ActionButton } from './ActionButton';
+export { default as AddTitleButton } from './AddTitleButton';
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
 export { default as CourselSkeleton } from './CourselSkeleton';
@@ -8,3 +9,6 @@ export { default as UserMenuProfile } from './items/UserMenuProfile';
 export { default as Loader } from './Loader';
 export { default as MovieCard } from './MovieCard';
 export { default as MuteButton } from './MuteButton';
+export { default as RateButton } from './RateButton';
+export { default as ShareButton } from './ShareButton';
+export { default as ShareOption } from './ShareOption';

@@ -14,9 +14,8 @@ import {
 } from 'react-share';
 import IconWrapper from 'src/common/templates/IconWrapper';
 
-import { useShareContext } from '../contexts/Share.context';
-
-import ShareOption from './ShareOption';
+import { useShareContext } from '../../contexts/Share.context';
+import ShareOption from '../atoms/ShareOption';
 
 const ModalShare = () => {
 	const { setIsOpen, isOpen } = useShareContext();

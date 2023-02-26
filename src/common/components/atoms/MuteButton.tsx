@@ -8,7 +8,7 @@ const MuteButton = ({ handleMute, muted, className }: MuteButtonProps) => {
 		<button
 			className={classNames(
 				className,
-				'flex justify-center items-center absolute z-1 bottom-4 right-4 h-8 aspect-square rounded-full bg-black/70'
+				'flex justify-center items-center absolute bottom-4 right-4 h-8 aspect-square rounded-full bg-black/70'
 			)}
 			onClick={handleMute}
 		>

@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { Props } from 'react-share/lib/ShareButton';
 
-import { useShareContext } from '../contexts/Share.context';
-import { useTitleContext } from '../contexts/Title.context';
+import { useShareContext } from '../../contexts/Share.context';
+import { useTitleContext } from '../../../modules/Title/contexts/Title.context';
 
 const ShareOption = ({ button: Button, icon: Icon, text, className }: ShareOptionProps) => {
 	const { isOpen, setIsOpen } = useShareContext();
