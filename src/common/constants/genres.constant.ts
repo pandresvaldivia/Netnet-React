@@ -1,10 +1,17 @@
-export enum GenresId {
+export enum SERIES_GENRE {
 	COMEDY = 35,
 	MISTERY = 9648,
-	ACTION = 28,
 	DRAMA = 18,
+	REALITY = 10764,
+	DOCUMENTARY = 99,
+}
+
+export enum MOVIES_GENRE {
+	COMEDY = 35,
+	ACTION = 28,
 	HORROR = 27,
-	ADVENTURE = 12,
 	ANIMATION = 16,
+	ADVENTURE = 12,
 	CRIME = 80,
+	DRAMA = 18,
 }

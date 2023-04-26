@@ -1,10 +1,9 @@
+import { CatalogApi } from '@api/v3/catalog.api';
 import { CourselSkeleton } from '@atoms';
+import useFetch from '@hooks/useFetch';
 import { GenresCarousel } from '@interfaces/catalog.interface';
-
-import { CatalogApi } from '../../../api/v3/catalog.api';
-import useFetch from '../../hooks/useFetch';
-import { CatalogResponse } from '../../interfaces/movie.interface';
-import MovieCarousel from '../../templates/MovieCarousel';
+import { CatalogResponse } from '@interfaces/movie.interface';
+import { MovieCarousel } from '@templates';
 
 const GenreCatalogCarousel = ({ genre }: GenreMoviesCarouselProps) => {
 	const { id, title, type } = genre;

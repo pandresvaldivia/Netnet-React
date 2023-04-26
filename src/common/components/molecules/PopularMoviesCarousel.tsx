@@ -1,9 +1,8 @@
+import { CatalogApi } from '@api/v3/catalog.api';
 import { CourselSkeleton } from '@atoms';
-
-import { CatalogApi } from '../../../api/v3/catalog.api';
-import useFetch from '../../hooks/useFetch';
-import { MovieResponse } from '../../interfaces/movie.interface';
-import MovieCarousel from '../../templates/MovieCarousel';
+import useFetch from '@hooks/useFetch';
+import { MovieResponse } from '@interfaces/movie.interface';
+import { MovieCarousel } from '@templates';
 
 const PopularMoviesCarousel = () => {
 	const { data, isLoading, error } = useFetch<MovieResponse>(CatalogApi.mostPopularMovies());

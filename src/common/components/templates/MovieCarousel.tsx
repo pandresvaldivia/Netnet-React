@@ -1,7 +1,6 @@
 import { MovieCard } from '@atoms';
 import { CONTENT_TYPE } from '@constants/content.constant';
-
-import { Movie, Series } from '../interfaces/movie.interface';
+import { PopularCarouselTitle } from '@interfaces/carousel.interface';
 
 const MovieCarousel = ({ movies, title, type = CONTENT_TYPE.MOVIE }: MovieCarouselProps) => {
 	return (
@@ -20,7 +19,7 @@ const MovieCarousel = ({ movies, title, type = CONTENT_TYPE.MOVIE }: MovieCarous
 };
 
 type MovieCarouselProps = {
-	movies: Movie[] | Series[];
+	movies: PopularCarouselTitle[];
 	title: string;
 	type?: CONTENT_TYPE;
 };

@@ -5,9 +5,9 @@ import { Navigate, useParams } from 'react-router-dom';
 
 const KEY = import.meta.env.VITE_API_KEY;
 
-const SeriesContext = createContext({} as TvSeries);
+const TvContext = createContext({} as TvSeries);
 
-const SeriesProvider = ({ children }: SeriesProviderProvider) => {
+const TvProvider = ({ children }: TvProviderProvider) => {
 	const id = useParams().id as string;
 
 	const { data, isLoading, error } = useFetch<TvSeries>(
@@ -18,13 +18,13 @@ const SeriesProvider = ({ children }: SeriesProviderProvider) => {
 
 	if (error || !data) return <Navigate to="/" />;
 
-	return <SeriesContext.Provider value={data}>{children}</SeriesContext.Provider>;
+	return <TvContext.Provider value={data}>{children}</TvContext.Provider>;
 };
 
-type SeriesProviderProvider = {
+type TvProviderProvider = {
 	children: ReactNode;
 };
 
-export const useSeriesContext = () => useContext(SeriesContext);
+export const useTvContext = () => useContext(TvContext);
 
-export default SeriesProvider;
+export default TvProvider;

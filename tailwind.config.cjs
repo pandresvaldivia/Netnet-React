@@ -28,6 +28,8 @@ module.exports = {
 				'netnet-dark': '#1f1f1f',
 				'netnet-orange': '#e87c03',
 				'netnet-green': '#71D074',
+				'netnet-skeleton-100': '#111827',
+				'netnet-skeleton-200': '#0c121d',
 			},
 			spacing: {
 				137: '34.25rem',

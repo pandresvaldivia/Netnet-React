@@ -1,24 +1,24 @@
 import { CONTENT_TYPE } from '@constants/content.constant';
+import { MOVIES_GENRE, SERIES_GENRE } from '@constants/genres.constant';
 
-import { GenresId } from '../../common/constants/genres.constant';
+import { CATALOG_ENDPOINTS } from '../constants/catalog.constant';
 import HttpsRequest from '../https-request.service';
-
-enum CatalogEndpoints {
-	MOST_POPULAR = 'movie/popular',
-	TV_MOVIES = 'discover',
-}
-
 export default class CatalogService extends HttpsRequest {
-	getMostPopularMovies() {
-		this.configRequest({ endpoint: CatalogEndpoints.MOST_POPULAR });
+	getSeriesMoviesByGenre(type: CONTENT_TYPE, genreId: SERIES_GENRE | MOVIES_GENRE) {
+		this.configRequest({
+			endpoint: `${CATALOG_ENDPOINTS.TV_MOVIES}/${type}`,
+			params: `&with_genres=${genreId}`,
+		});
 		return this.urlBuilder();
 	}
 
-	getSeriesMoviesByGenre(type: CONTENT_TYPE, genreId: GenresId) {
-		this.configRequest({
-			endpoint: `${CatalogEndpoints.TV_MOVIES}/${type}`,
-			params: `&with_genres=${genreId}`,
-		});
+	getMostPopularMovies() {
+		this.configRequest({ endpoint: CATALOG_ENDPOINTS.MOST_POPULAR_MOVIES, params: '' });
+		return this.urlBuilder();
+	}
+
+	getMostPopularSeries() {
+		this.configRequest({ endpoint: CATALOG_ENDPOINTS.MOST_POPULAR_SERIES, params: '' });
 		return this.urlBuilder();
 	}
 }

@@ -1,7 +1,7 @@
+import { GenreApi } from '@api/v3/genre.api';
 import { getGenresDetails, getGenresText } from '@helpers/genre.helper';
 import useFetch from '@hooks/useFetch';
 import { TitleGenres } from '@interfaces/genre.interface';
-import { GenreApi } from 'src/api/v3/genre.api';
 
 const HeroGenres = ({ genres }: HeroGenresProps) => {
 	const { data, isLoading, error } = useFetch<TitleGenres>(GenreApi.getMovieGenres());

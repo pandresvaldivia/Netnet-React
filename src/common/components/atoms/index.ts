@@ -13,3 +13,5 @@ export { default as MuteButton } from './MuteButton';
 export { default as RateButton } from './RateButton';
 export { default as ShareButton } from './ShareButton';
 export { default as ShareOption } from './ShareOption';
+export { default as ActionSkeleton } from './skeletons/ActionSkeleton';
+export { default as ButtonSkeleton } from './skeletons/ButtonSkeleton';

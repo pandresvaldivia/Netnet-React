@@ -1,8 +1,8 @@
+import { RecommendationApi } from '@api/v3/recommendation.api';
 import { MovieCard } from '@atoms';
 import { CONTENT_TYPE } from '@constants/content.constant';
 import useFetch from '@hooks/useFetch';
 import { Recommendation } from '@interfaces/recommendation.interface';
-import { RecommendationApi } from 'src/api/v3/recommendation.api';
 
 const MoreLikeThisGrid = ({ id, type }: MoreLikeThisGrid) => {
 	const { data, isLoading, error } = useFetch<Recommendation>(

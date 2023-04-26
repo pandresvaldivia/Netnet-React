@@ -1,19 +1,24 @@
 import { CONTENT_TYPE } from '@constants/content.constant';
-import { Movie, Series } from '@interfaces/movie.interface';
+import { PopularCarouselTitle } from '@interfaces/carousel.interface';
 import { Title } from 'src/services/interfaces/storage';
 
-export const createStoredTitle = (title: Movie | Series, type = CONTENT_TYPE.MOVIE): Title => {
+export const createStoredTitle = (
+	title: PopularCarouselTitle,
+	type = CONTENT_TYPE.MOVIE
+): Title => {
+	const { id, name = '', title: movieName = '', poster_path } = title;
+
 	if (type === CONTENT_TYPE.MOVIE) {
 		return {
-			id: title.id,
-			name: title.title,
-			poster: title.poster_path,
+			id,
+			name: movieName,
+			poster: poster_path,
 		};
 	}
 
 	return {
-		id: title.id,
-		name: title.name,
-		poster: title.poster_path,
+		id,
+		name,
+		poster: poster_path,
 	};
 };
